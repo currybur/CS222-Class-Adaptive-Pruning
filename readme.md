@@ -15,10 +15,10 @@
 ## 实验和结果
 用了cifar 10 数据集[<sup>3</sup>](#refer-anchor-3)训练VGG-19，看看AM效果（不愧被称为DeepDream，你认得出来图里都是什么品种吗👽）。  
 
-<img src="am_img/1.png" width="15%">
-<img src="am_img/2.png" width="15%">
-<img src="am_img/3.png" width="15%">
-<img src="am_img/4.png" width="15%">
+<img src="https://github.com/currybur/CS222-Class-Adaptive-Pruning/blob/master/am_img/1.png" width="15%">
+<img src="https://github.com/currybur/CS222-Class-Adaptive-Pruning/blob/master/am_img/2.png" width="15%">
+<img src="https://github.com/currybur/CS222-Class-Adaptive-Pruning/blob/master/am_img/3.png" width="15%">
+<img src="https://github.com/currybur/CS222-Class-Adaptive-Pruning/blob/master/am_img/4.png" width="15%">
 <!-- ![alt 属性文本](am_img/1.png) -->
 
 原论文主要是AM聚类+梯度贴标签，然后删掉相应类别的cluster里的卷积核，就可以快速剪枝了，称为cluster level pruning。我们考虑了一个卷积核可能对多个类别有较大贡献的情况，提出filter level pruning，相当于更细粒度了。  
