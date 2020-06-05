@@ -19,7 +19,6 @@
 <img src="https://github.com/currybur/CS222-Class-Adaptive-Pruning/raw/master/am_img/2.png" width="15%">
 <img src="https://github.com/currybur/CS222-Class-Adaptive-Pruning/raw/master/am_img/3.png" width="15%">
 <img src="https://github.com/currybur/CS222-Class-Adaptive-Pruning/raw/master/am_img/4.png" width="15%">
-<!-- ![alt 属性文本](am_img/1.png) -->
 
 原论文主要是AM聚类+梯度贴标签，然后删掉相应类别的cluster里的卷积核，就可以快速剪枝了，称为cluster level pruning。我们考虑了一个卷积核可能对多个类别有较大贡献的情况，提出filter level pruning，相当于更细粒度了。  
 然后基于用cifar-10训练的VGG-19简单测试了一下两个方法。然而很可惜，我们的剪枝效果其实不太好，主要在于原文提出的用梯度来贴标签我们做出来标签似乎并不准确，比如一个卷积核的AM看起来是鸟，而梯度贡献最大的却是车，可能实现方法有问题，不过作业交完就懒得再研究了🙃。
