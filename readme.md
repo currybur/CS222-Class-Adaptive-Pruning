@@ -2,6 +2,8 @@
 **A shallow insight into convolution neural network**  
 ***
 算法设计与分析课的大作业。这课我学得不好😪，英文授课以及我总爱走神，课后花时间也不够。大作业和算法没什么联系，如标题所言，主要是理解卷积神经网络结构和粗浅了解一些神经网络可视化。
+
+更新：组员毕设中重新研究了这个工作，发现CAPTOR论文中求激活梯度似乎对象搞错了，应当是对卷积核权重求导而非特征图求导。[他的仓库](https://github.com/david990917/Model-Pruning-in-Deep-Learning)。
 ***
 ## 剪枝与类适应剪枝
 对神经网络剪枝使得其轻量化，便于部署到网络边缘设备上，这在今天移动互联网蓬勃发展的背景下尤其重要。实验表明当今流行的神经网络模型中许多结构是冗余的，去掉一些对准确率没什么影响，发展出了许多剪枝方法。大作业主要是复现***CAPTOR: A Class Adaptive Filter Pruning Framework for Convolutional Neural Networks in Mobile Applications***[<sup>1</sup>](#refer-anchor-1)，通过  
